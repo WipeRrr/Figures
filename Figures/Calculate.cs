@@ -41,7 +41,7 @@ namespace Figures
                 {
                     perimeter = Math.Pow((shape as Square).SideLength, 4);
                 }
-                else
+                else if (shape is Rectangle)
                 {
                     perimeter += (shape as Rectangle).SideWidth*2 + (shape as Rectangle).SideLength*2;
                 }
@@ -50,12 +50,7 @@ namespace Figures
             }
               return perimeter;
         }
-        public void Output()
-        {
-            Console.WriteLine(Area());
-            Console.WriteLine(Perimeter());
-        }
-
+     
 
 
 

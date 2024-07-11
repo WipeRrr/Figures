@@ -16,7 +16,9 @@ namespace Figures
             var calculator = new Calculate(array);
 
 
-            calculator.Output();
+            var outputter = new CalculateOutputter(calculator);
+
+            outputter.ToConsole();  
            
 
             Console.ReadLine();

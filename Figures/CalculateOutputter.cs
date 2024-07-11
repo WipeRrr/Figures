@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Figures
 {
-    internal class CalculateOutputter
+    public class CalculateOutputter
     {
+        public Calculate Calculate {  get; set; }
+
+        public CalculateOutputter(Calculate calculate) 
+        {
+            Calculate = calculate;
+        }
+
+        public void ToConsole()
+        {
+            Console.WriteLine(Calculate.Area());
+            Console.WriteLine(Calculate.Perimeter());
+        }
     }
 }
+ 
