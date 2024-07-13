@@ -1,12 +1,12 @@
-﻿namespace Figures
+﻿using System;
+
+namespace Figures
 {
-    public class Square:IShape
+    public class Square : Rectangle
     {
-        public double SideLength { get; set; }
-        public Square(double sideLength)
+        public double SquareSideLength { get; set; }
+        public Square(double sideLength) : base(sideLength, sideLength)
         {
-            SideLength = sideLength;
-           
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+
 
 namespace Figures
 {
@@ -9,21 +8,22 @@ namespace Figures
     {
         static void Main(string[] args)
         {
-            var array = new List<IShape>();
-            array.Add(new Rectangle(1,2));
-            array.Add(new Square(3));
+            Console.WriteLine("Welcome to the Shapes Calculator. With this program you can calculate the area and perimeter of selected shapes.\n");
+            while (true)
+            {
+                var expression = new GetExpression();
+                IShape shape = expression.GetShapeFromUser();
 
-            var calculator = new Calculate(array);
+                if (shape != null)
+                {
+                    var shapes = new List<IShape> { shape };
+                    var calculator = new Calculate(shapes);
+                    var outputter = new CalculateOutputter(calculator);
 
-
-            var outputter = new CalculateOutputter(calculator);
-
-            outputter.ToConsole();  
-           
-
-            Console.ReadLine();
-
-
+                    outputter.ToConsole();
+                }
+             
+            }
         }
     }
 }

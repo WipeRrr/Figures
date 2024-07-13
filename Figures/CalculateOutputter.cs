@@ -13,8 +13,9 @@ namespace Figures
 
         public void ToConsole()
         {
-            Console.WriteLine(Calculate.Area());
-            Console.WriteLine(Calculate.Perimeter());
+            Console.WriteLine("\nArea: " + Calculate.GetTotalArea());
+            Console.WriteLine("Perimeter: " + Calculate.GetTotalPerimeter());
+            Console.WriteLine("-------------------------------------------------------------------------------------------");
         }
     }
 }

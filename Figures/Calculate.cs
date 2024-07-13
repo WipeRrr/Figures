@@ -11,48 +11,29 @@ namespace Figures
         {
             Shapes = shapes;
         }
-        public double Area()
+        public double GetTotalArea()
         {
             double area = 0;
-            foreach (var shape in Shapes) {
-
-                if (shape is Square) {
-                    area += Math.Pow((shape as Square).SideLength, 2);
-                   
-                }
-                else if(shape is Rectangle)
-                {
-                    area += (shape as Rectangle).SideWidth * (shape as Rectangle).SideLength;
-                    }
-               
+            foreach (var shape in Shapes) 
+            {
+              
+                area += shape.GetArea();           
 
             }
             return area;
         }
 
 
-        public double Perimeter()
+        public double GetTotalPerimeter()
         {
             double perimeter = 0;
             foreach (var shape in Shapes)
             {
-
-                if (shape is Square)
-                {
-                    perimeter = Math.Pow((shape as Square).SideLength, 4);
-                }
-                else if (shape is Rectangle)
-                {
-                    perimeter += (shape as Rectangle).SideWidth*2 + (shape as Rectangle).SideLength*2;
-                }
-              
+                perimeter += shape.GetPerimeter();
 
             }
               return perimeter;
         }
-     
-
-
 
     }
 }
