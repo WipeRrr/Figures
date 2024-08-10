@@ -1,6 +1,6 @@
 ﻿using System;
 using Figures;
-public class GetExpression
+public class ExpressionReceiver
 {
     public IShape GetShapeFromUser()
     {

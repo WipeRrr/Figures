@@ -11,7 +11,7 @@ namespace Figures
             Console.WriteLine("Welcome to the Shapes Calculator. With this program you can calculate the area and perimeter of selected shapes.\n");
             while (true)
             {
-                var expression = new GetExpression();
+                var expression = new ExpressionReceiver();
                 IShape shape = expression.GetShapeFromUser();
 
                 if (shape != null)

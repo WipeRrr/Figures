@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Calculate.cs" />
     <Compile Include="CalculateOutputter.cs" />
-    <Compile Include="GetExpression.cs" />
+    <Compile Include="ExpressionReceiver.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
